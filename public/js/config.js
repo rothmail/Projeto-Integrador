@@ -1,7 +1,7 @@
 // Configurações da aplicação
 
 const APP_CONFIG = {
-    name: 'Família Conectada',
+    name: 'Caminhos',
     description: 'Rede de Apoio Parental',
     version: '1.0.0',
 

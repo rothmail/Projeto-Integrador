@@ -1,6 +1,6 @@
 /**
  * ============================================
- * FAMÍLIA CONECTADA - SISTEMA DE AUTENTICAÇÃO
+ * CAMINHOS - SISTEMA DE AUTENTICAÇÃO
  * Backend em JavaScript Vanilla
  * ============================================
  */
@@ -10,8 +10,8 @@
 // ============================================
 
 const AUTH_CONFIG = {
-    storageKey: 'familiaConectada_users',
-    currentUserKey: 'familiaConectada_currentUser',
+    storageKey: 'caminhos_users',
+    currentUserKey: 'caminhos_currentUser',
     minPasswordLength: 6,
     sessionTimeout: 24 * 60 * 60 * 1000, // 24 horas em ms
 };

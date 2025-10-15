@@ -1,4 +1,4 @@
-const db = require('../config/database');
+const db = require('../db/database');
 
 exports.getPosts = async (req, res) => {
     try {
@@ -8,8 +8,8 @@ exports.getPosts = async (req, res) => {
 
         const [posts] = await db.query(
             `SELECT * FROM v_posts_with_user 
-       ORDER BY created_at DESC 
-       LIMIT ? OFFSET ?`,
+            ORDER BY created_at DESC 
+            LIMIT ? OFFSET ?`,
             [limit, offset]
         );
 

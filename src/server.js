@@ -2,9 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
-const authRoutes = require('./routes/auth');
-const postsRoutes = require('./routes/posts');
-const usersRoutes = require('./routes/users');
+const authRoutes = require('./routes/authRoutes');
+const postsRoutes = require('./routes/postRoutes');
+const usersRoutes = require('./routes/usersRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,19 +21,19 @@ app.use('/api/users', usersRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'ok', message: 'API is running' });
+  res.json({ status: 'ok', message: 'API is running' });
 });
 
 // Error handler
 app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).json({
-        error: 'Something went wrong!',
-        message: err.message
-    });
+  console.error(err.stack);
+  res.status(500).json({ 
+    error: 'Something went wrong!',
+    message: err.message 
+  });
 });
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });

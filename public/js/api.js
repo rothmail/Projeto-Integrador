@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3001/api';
+const API_URL = 'http://localhost:3000/api';
 
 async function fetchWithAuth(endpoint, options = {}) {
     const token = authService.getToken();
