@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Família Conectada - Rede de Apoio Parental</title>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles/globals.css">
+    <link rel="stylesheet" href="/styles/vanilla.css">
+</head>
+<body class="bg-background text-foreground">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="min-h-screen bg-background flex items-center justify-center">
+        <div class="text-center">
+            <div class="w-16 h-16 border-4 border-brown border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p class="text-brown">Carregando...</p>
+        </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="app-container" class="hidden">
+        <!-- Header -->
+        <header id="app-header"></header>
+        
+        <!-- Main Layout -->
+        <div class="flex">
+            <!-- Sidebar -->
+            <aside id="app-sidebar"></aside>
+            
+            <!-- Main Content -->
+            <main id="app-main" class="flex-1 p-6"></main>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2"></div>
+
+    <!-- Modal Container -->
+    <div id="modal-container"></div>
+
+    <!-- Auth Screen (Login/Cadastro) -->
+    <div id="auth-screen" class="auth-container">
+        <div class="auth-card">
+            <!-- Header -->
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h1 class="auth-title">Família Conectada</h1>
+                <p class="auth-subtitle">Rede de apoio para pais e responsáveis</p>
+            </div>
+
+            <!-- Body -->
+            <div class="auth-body">
+                <div id="auth-alert"></div>
+
+                <!-- Login Form -->
+                <div id="login-form" class="form-container active">
+                    <form id="login-form-element">
+                        <div class="form-group">
+                            <label for="login-email" class="form-label required">Email</label>
+                            <input 
+                                type="email" 
+                                id="login-email" 
+                                class="form-input" 
+                                placeholder="seu@email.com"
+                                required
+                            >
+                            <span class="form-error" id="login-email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-password" class="form-label required">Senha</label>
+                            <div class="password-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="login-password" 
+                                    class="form-input" 
+                                    placeholder="••••••••"
+                                    required
+                                >
+                                <button type="button" class="password-toggle" data-toggle="login-password">
+                                    <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="form-error" id="login-password-error"></span>
+                        </div>
+
+                        <div class="auth-options">
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember-me">
+                                <label for="remember-me">Lembrar-me</label>
+                            </div>
+                            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                        </div>
+
+                        <button type="submit" class="auth-submit-btn" id="login-submit">
+                            Entrar
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Register Form -->
+                <div id="register-form" class="form-container">
+                    <form id="register-form-element">
+                        <div class="form-group">
+                            <label for="register-name" class="form-label required">Nome completo</label>
+                            <input 
+                                type="text" 
+                                id="register-name" 
+                                class="form-input" 
+                                placeholder="Seu nome"
+                                required
+                            >
+                            <span class="form-error" id="register-name-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-email" class="form-label required">Email</label>
+                            <input 
+                                type="email" 
+                                id="register-email" 
+                                class="form-input" 
+                                placeholder="seu@email.com"
+                                required
+                            >
+                            <span class="form-error" id="register-email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-password" class="form-label required">Senha</label>
+                            <div class="password-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="register-password" 
+                                    class="form-input" 
+                                    placeholder="Mínimo 6 caracteres"
+                                    required
+                                >
+                                <button type="button" class="password-toggle" data-toggle="register-password">
+                                    <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="form-error" id="register-password-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-confirm-password" class="form-label required">Confirmar senha</label>
+                            <div class="password-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="register-confirm-password" 
+                                    class="form-input" 
+                                    placeholder="Digite a senha novamente"
+                                    required
+                                >
+                                <button type="button" class="password-toggle" data-toggle="register-confirm-password">
+                                    <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="form-error" id="register-confirm-password-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-role" class="form-label required">Você é:</label>
+                            <select id="register-role" class="form-select" required>
+                                <option value="">Selecione...</option>
+                                <option value="mae">Mãe</option>
+                                <option value="pai">Pai</option>
+                                <option value="responsavel">Responsável</option>
+                                <option value="cuidador">Cuidador(a)</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                            <span class="form-error" id="register-role-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Idade dos filhos (opcional):</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="age-0-2" value="0-2">
+                                    <label for="age-0-2">0-2 anos</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="age-3-5" value="3-5">
+                                    <label for="age-3-5">3-5 anos</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="age-6-12" value="6-12">
+                                    <label for="age-6-12">6-12 anos</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="age-13plus" value="13+">
+                                    <label for="age-13plus">13+ anos</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="auth-submit-btn" id="register-submit">
+                            Criar conta
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="auth-footer">
+                <div id="login-switch" class="auth-switch">
+                    Não tem uma conta? <button type="button" id="show-register">Cadastre-se</button>
+                </div>
+                <div id="register-switch" class="auth-switch" style="display: none;">
+                    Já tem uma conta? <button type="button" id="show-login">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/config.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/state.js"></script>
+    <script src="/js/components.js"></script>
+    <script src="/js/pages.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

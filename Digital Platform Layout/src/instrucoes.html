@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruções - Família Conectada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1A1A1A;
+            background: linear-gradient(135deg, #F5DEB3 0%, #E5D4A3 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #8B4513;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            color: #8B4513;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #F5DEB3;
+        }
+
+        .section h3 {
+            color: #8B4513;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .section p, .section li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        .section ul, .section ol {
+            margin-left: 2rem;
+        }
+
+        .code-block {
+            background: #f5f5f5;
+            border-left: 4px solid #8B4513;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #8B4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            background: #6B3510;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+        }
+
+        .btn-secondary {
+            background: #F5DEB3;
+            color: #8B4513;
+        }
+
+        .btn-secondary:hover {
+            background: #E5CDA3;
+        }
+
+        .buttons {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: #F5DEB3;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #8B4513;
+        }
+
+        .feature-card h4 {
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .alert {
+            background: #FFF3CD;
+            border-left: 4px solid #FFA500;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .alert-info {
+            background: #D1ECF1;
+            border-left-color: #17A2B8;
+        }
+
+        .alert-success {
+            background: #D4EDDA;
+            border-left-color: #28A745;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 0.5rem;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>👪 Família Conectada</h1>
+            <p>Rede de Apoio Parental - Versão JavaScript Vanilla</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2><span class="emoji">🚀</span>Como Iniciar</h2>
+                
+                <div class="alert alert-info">
+                    <strong>⚠️ Importante:</strong> Esta aplicação precisa rodar em um servidor local para funcionar corretamente. Não abra o arquivo HTML diretamente!
+                </div>
+
+                <h3>Opção 1: Python (Recomendado)</h3>
+                <div class="code-block">
+# Navegue até a pasta do projeto<br>
+cd caminho/para/o/projeto<br>
+<br>
+# Python 3<br>
+python -m http.server 8000<br>
+<br>
+# Python 2<br>
+python -m SimpleHTTPServer 8000<br>
+<br>
+# Acesse: http://localhost:8000
+                </div>
+
+                <h3>Opção 2: Node.js</h3>
+                <div class="code-block">
+# Instale o http-server (apenas uma vez)<br>
+npm install -g http-server<br>
+<br>
+# Inicie o servidor<br>
+http-server -p 8000<br>
+<br>
+# Acesse: http://localhost:8000
+                </div>
+
+                <h3>Opção 3: VS Code Live Server</h3>
+                <ol>
+                    <li>Instale a extensão "Live Server" no VS Code</li>
+                    <li>Clique com botão direito em <code>index.html</code></li>
+                    <li>Selecione "Open with Live Server"</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2><span class="emoji">✨</span>Funcionalidades</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>📝 Posts</h4>
+                        <p>Crie, curta e comente posts da comunidade</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>💬 Conversas</h4>
+                        <p>Mensagens diretas com outros membros</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>👥 Comunidades</h4>
+                        <p>Participe de grupos temáticos</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📅 Eventos</h4>
+                        <p>Workshops, palestras e encontros</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📚 Recursos</h4>
+                        <p>Guias, e-books e materiais educativos</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎯 Fóruns</h4>
+                        <p>4 fóruns temáticos especializados</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="emoji">🎨</span>Paleta de Cores</h2>
+                <p>Este projeto segue rigorosamente a <strong>Regra 60-30-10</strong>:</p>
+                <ul>
+                    <li><strong>60% Wheat (#F5DEB3)</strong> - Cor dominante/base</li>
+                    <li><strong>30% Brown (#8B4513)</strong> - Cor secundária/contraste</li>
+                    <li><strong>10% Branco (#FFFFFF)</strong> - Cor de destaque/acento</li>
+                    <li><strong>Cores de apoio:</strong> Cinza e Preto</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2><span class="emoji">🎯</span>Fóruns Temáticos</h2>
+                
+                <h3>1. Primeira Infância (0-3 anos)</h3>
+                <p>Desenvolvimento motor, alimentação, sono, amamentação e primeiros passos.</p>
+
+                <h3>2. Pré-escola (4-6 anos)</h3>
+                <p>Alfabetização, socialização, comportamento e preparação escolar.</p>
+
+                <h3>3. Adolescência</h3>
+                <p>Comunicação, autonomia, saúde mental e redes sociais.</p>
+
+                <h3>4. Necessidades Especiais</h3>
+                <p>TEA, TDAH, inclusão escolar, terapias e direitos.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="emoji">📱</span>Recursos de Saúde Mental</h2>
+                
+                <div class="alert alert-success">
+                    <strong>🧠 Números de Apoio Disponíveis:</strong>
+                    <ul style="margin-top: 0.5rem; margin-bottom: 0;">
+                        <li><strong>CVV:</strong> 188 (24h)</li>
+                        <li><strong>SUS:</strong> 136</li>
+                        <li><strong>SAMU:</strong> 192</li>
+                        <li><strong>Disque Denúncia:</strong> 100</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="emoji">📁</span>Estrutura do Projeto</h2>
+                <div class="code-block">
+/<br>
+├── index.html              # Arquivo principal<br>
+├── instrucoes.html         # Este arquivo<br>
+├── styles/<br>
+│   ├── globals.css        # Estilos globais<br>
+│   └── vanilla.css        # Estilos vanilla<br>
+├── js/<br>
+│   ├── config.js          # Configurações<br>
+│   ├── utils.js           # Utilitários<br>
+│   ├── state.js           # Estado global<br>
+│   ├── components.js      # Componentes<br>
+│   ├── pages.js           # Páginas<br>
+│   └── app.js             # App principal<br>
+├── VANILLA-README.md       # Documentação técnica<br>
+└── GUIA-USO.md            # Guia detalhado
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="emoji">🐛</span>Debug Mode</h2>
+                <p>Em ambiente local, você pode usar o console do navegador (F12) para debug:</p>
+                <div class="code-block">
+// Ver estado atual<br>
+console.log(window.appDebug.state);<br>
+<br>
+// Criar toast<br>
+window.appDebug.showToast('Teste!', 'success');<br>
+<br>
+// Forçar re-render<br>
+window.appDebug.render();
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="emoji">📚</span>Documentação</h2>
+                <ul>
+                    <li><strong>VANILLA-README.md</strong> - Documentação técnica completa</li>
+                    <li><strong>GUIA-USO.md</strong> - Guia detalhado de uso</li>
+                    <li><strong>EXAMPLES.md</strong> - Exemplos de código</li>
+                </ul>
+            </div>
+
+            <div class="buttons">
+                <a href="index.html" class="btn">Abrir Aplicação</a>
+                <a href="VANILLA-README.md" class="btn btn-secondary">Documentação Técnica</a>
+                <a href="GUIA-USO.md" class="btn btn-secondary">Guia de Uso</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Família Conectada</strong> - Rede de Apoio Parental v1.0.0</p>
+            <p>Desenvolvido com ❤️ para apoiar famílias brasileiras</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem;">
+                Este projeto segue os ODS 3 da ONU: Saúde e Bem-Estar<br>
+                Fundamentado em estudos sobre saúde mental na infância e desenvolvimento psicológico
+            </p>
+        </div>
+    </div>
+</body>
+</html>
