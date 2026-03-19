@@ -1,3 +1,247 @@
+/* RESET */
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* VARIÁVEIS */
+:root {
+    --bg-main: #F5DEB3;   
+    --bg-light: #F1F1F1;
+    --bg-card: #E5E5E5;
+    --brown: #8B4513;
+    --text-dark: #1A1A1A;
+    --text-medium: #4A4A4A;
+}
+
+/* BODY */
+body {
+    display: flex;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+}
+
+/* HEADER */
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 80px;
+    background-color: var(--bg-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid var(--bg-card);
+    z-index: 10;
+}
+
+.div-container-logotipo {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-container-logotipo h1 {
+    font-size: 20px;
+    color: var(--brown);
+}
+
+.div-container-logotipo legend {
+    font-size: 13px;
+    color: var(--text-medium);
+}
+
+.div-container-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.div-container-user button {
+    background: var(--bg-card);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.div-container-user button:hover {
+    background: var(--brown);
+}
+
+/* SIDEBAR */
+.nav-sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--brown);
+    padding: 30px 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-sidebar li {
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--bg-light);
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-sidebar li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-sidebar legend {
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--bg-card);
+    opacity: 0.8;
+}
+
+.nav-sidebar hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+}
+
+.nav-sidebar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* MAIN CONTENT (caso tu adicione depois) */
+.main-content {
+    margin-left: 250px;
+    margin-top: 100px;
+    padding: 40px;
+    width: calc(100% - 250px);
+}
+
+/* CARD PADRÃO */
+.card {
+    background-color: var(--bg-light);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* BOTÕES */
+button.primary {
+    background-color: var(--brown);
+    color: var(--bg-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button.primary:hover {
+    opacity: 0.8;
+}
+
+
+/**
+* TESTE
+*/
+
+/* GRID PRINCIPAL */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* CREATE POST */
+.create-post {
+    background: #E8DC92;
+}
+
+.post-header {
+    display: flex;
+    gap: 15px;
+}
+
+.post-header img {
+    border-radius: 50%;
+}
+
+.input-area p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-actions select {
+    padding: 5px;
+    border-radius: 6px;
+}
+
+/* POSTS */
+.post-user {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.post-user img {
+    border-radius: 50%;
+}
+
+.post-user p {
+    font-size: 12px;
+    color: var(--text-medium);
+}
+
+.tag {
+    font-size: 12px;
+    color: var(--brown);
+    margin-bottom: 10px;
+}
+
+.post-footer {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stats h3,
+.resources h3 {
+    margin-bottom: 10px;
+}
+
+.resource-item {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.resource-item span {
+    color: var(--text-medium);
+    font-size: 12px;
 }

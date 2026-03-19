@@ -5,41 +5,147 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Caminhos</title>
-  <link rel="stylesheet" href="./public/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./interfaces/css/style.css">
 </head>
 
 <body>
+
+  <!-- CABEÇALHO -->
   <header class="header-container">
     <div class="div-container-logotipo">
-      <img src="" alt="logo da plataforma">
     <h1>Caminhos</h1>
     <legend>Rede Pais</legend>
     </div>
 
     <div class="div-container-user">
-      <button><img src="" alt="botão de notificação"></button>
-      <img src="" alt="foto de perfil">
+      <button><i class="fa-regular fa-bell"></i></button>
+      <button><i class="fa-solid fa-user"></i></button>
     </div>
   </header>
 
+
+  <!-- NAV MENU -->
   <nav class="nav-sidebar">
-    <li><i class="fa fa-user"></i>Início</li>
-    <li><i class="fa fa-menu"></i>Minha Comunidade</li>
-    <li><i class="fa fa-user"></i>Conversas</li>
+    <li><i class="fa-solid fa-house"></i></i>Início</li>
+    <li><i class="fa-solid fa-users"></i>Minha Comunidade</li>
+    <li><i class="fa-solid fa-comment"></i>Conversas</li>
     <hr>
     <legend>Fóruns Temáticos</legend>
-    <li><i class="fa fa-user"></i>1º Infância (0-3 anos)</li>
-    <li><i class="fa fa-user"></i>Pré-Escola (4-6 anos)</li>
-    <li><i class="fa fa-user"></i>Adolescência</li>
-    <li><i class="fa fa-user"></i>Necessidades Especiais</li>
+    <li><i class="fa-solid fa-baby-carriage"></i>1º Infância (0-3 anos)</li>
+    <li><i class="fa-solid fa-school"></i></i>Pré-Escola (4-6 anos)</li>
+    <li><i class="fa-solid fa-child"></i></i>Adolescência</li>
+    <li><i class="fa-solid fa-puzzle-piece"></i>Necessidades Especiais</li>
     <hr>
     <legend>Recursos</legend>
-    <li><i class="fa fa-user"></i>Artigos e Guias</li>
-    <li><i class="fa fa-user"></i>Eventos</li>
-    <li><i class="fa fa-user"></i>Perguntas Frequentes</li>
+    <li><i class="fa-solid fa-quote-left"></i>Artigos e Guias</li>
+    <li><i class="fa-solid fa-bullhorn"></i>Eventos</li>
+    <li><i class="fa-solid fa-circle-question"></i>Perguntas Frequentes</li>
     <hr>
-    <li><i class="fa fa-cog" aria-hidden="true"></i><a href="">Configurações</a></li>
+    <li><i class="fa-solid fa-gear"></i><a href="">Configurações</a></li>
   </nav>
+
+  <!-- MENU HAMBURGUER -->
+  <!-- COLOCAR AQUI -->
+
+  <!-- TESTE -->
+  <main class="main-content">
+
+    <!-- CRIAR POST -->
+    <div class="card create-post">
+      <div class="post-header">
+        <img src="" alt="Avatar do usuário"> <!-- Adicionar função para 'linkar' com a foto de perfil -->
+        <div class="input-area">
+          <p>Compartilhe suas experiências, dúvidas ou momentos especiais com a comunidade...</p>
+          <div class="post-actions">
+            <span><i class="fa-solid fa-image"></i> Foto</span>
+            <select> <!-- Acrescentar categorias -->
+              <option>Geral</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="content-grid">
+  
+      <!-- FEED -->
+      <div class="feed">
+  
+        <!-- POST 1 -->
+        <div class="card post">
+          <div class="post-user">
+            <img src="" alt="Avatar do usuário"> <!-- Adicionar função para 'linkar' com a foto de perfil -->
+            <div>
+              <strong>Marina Silva</strong> <!-- 'Linkar' informações de usuário -->
+              <p>Mãe de 2 filhos • 2 horas</p> <!-- 'Linkar' informações de usuário -->
+            </div>
+          </div>
+  
+          <p class="tag">Desenvolvimento Emocional</p>
+  
+          <p>
+            Hoje tive uma conversa incrível com minha filha de 5 anos sobre sentimentos...
+          </p>
+  
+          <div class="post-footer">
+            <span><i class="fa-regular fa-heart"></i> 24</span> <!-- Função para registrar ao vivo essas informações -->
+            <span><i class="fa-regular fa-comment"></i> 1</span> <!-- Função para registrar ao vivo essas informações -->
+          </div>
+        </div>
+  
+        <!-- POST 2 -->
+        <div class="card post">
+          <div class="post-user">
+            <img src="" alt="Avatar de usuário"> <!-- Adicionar função para 'linkar' com a foto de perfil -->
+            <div>
+              <strong>Carlos Mendes</strong> <!-- 'Linkar' informações de usuário -->
+              <p>Pai de 1 filho • 4 horas</p> <!-- 'Linkar' informações de usuário -->
+            </div>
+          </div>
+  
+          <p class="tag">Sono e Rotina</p> <!-- Função para receber a categoria registrada -->
+  
+          <p>
+            Compartilhando nossa rotina de sono que finalmente funcionou...
+          </p>
+  
+        </div>
+  
+      </div>
+  
+      <!-- SIDEBAR DIREITA -->
+      <div class="right-panel">
+
+        <!-- Criar função para que os dados sejam registrados/atualizados diariamente -->
+        <div class="card stats">
+          <h3>Nossa Comunidade</h3>
+          <p><strong>2.847</strong> Membros Ativos</p>
+          <p><strong>156</strong> Conversas Hoje</p>
+          <p><strong>1.203</strong> Apoios Dados</p>
+        </div>
+  
+        <div class="card resources">
+          <h3>Recursos Recomendados</h3>
+  
+          <div class="resource-item">
+            <p><strong>Como lidar com birras</strong></p>
+            <span>Estratégias baseadas em evidências</span>
+          </div>
+  
+          <div class="resource-item">
+            <p><strong>Desenvolvimento emocional</strong></p>
+            <span>Webinar com especialista</span>
+          </div>
+  
+          <button class="primary">Ver todos</button>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </main>
 
   <script type="module" src=".//interfaces/js/script.js"></script>
 </body>
