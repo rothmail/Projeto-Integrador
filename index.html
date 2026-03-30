@@ -14,8 +14,8 @@
   <!-- CABEÇALHO -->
   <header class="header-container">
     <div class="div-container-logotipo">
-    <h1>Caminhos</h1>
-    <legend>Rede Pais</legend>
+      <h1>Caminhos</h1>
+      <legend>Rede Pais</legend>
     </div>
 
     <div class="div-container-user">
@@ -52,11 +52,11 @@
   <main class="main-content">
 
     <!-- CRIAR POST -->
-    <div class="card create-post">
-      <div class="post-header">
+    <section class="card create-post">
+      <article class="post-header">
         <img src="" alt="Avatar do usuário"> <!-- Adicionar função para 'linkar' com a foto de perfil -->
         <div class="input-area">
-          <textarea name="" class="textarea-post" id="create-post" cols="130" rows="5">Compartilhe suas experiências, dúvidas ou momentos especiais com a comunidade...</textarea>
+          <textarea name="" class="textarea-post" id="create-post" cols="100" rows="5"></textarea>
           <div class="post-actions">
             <span><i class="fa-solid fa-image"></i> Foto</span>
             <select> <!-- Acrescentar categorias -->
@@ -64,14 +64,12 @@
             </select>
           </div>
         </div>
-      </div>
-    </div>
-  
-    <div class="content-grid">
-  
+      </article>
+    </section>
+
+    <section class="content-grid">
       <!-- FEED -->
-      <div class="feed">
-  
+      <article class="feed">
         <!-- POST 1 -->
         <div class="card post">
           <div class="post-user">
@@ -81,19 +79,20 @@
               <p>Mãe de 2 filhos • 2 horas</p> <!-- 'Linkar' informações de usuário -->
             </div>
           </div>
-  
+
           <p class="tag">Desenvolvimento Emocional</p>
-  
+
           <p>
             Hoje tive uma conversa incrível com minha filha de 5 anos sobre sentimentos...
           </p>
-  
+
           <div class="post-footer">
             <span><i class="fa-regular fa-heart"></i> 24</span> <!-- Função para registrar ao vivo essas informações -->
-            <span><i class="fa-regular fa-comment"></i> 1</span> <!-- Função para registrar ao vivo essas informações -->
+            <span><i class="fa-regular fa-comment"></i> 1</span>
+            <!-- Função para registrar ao vivo essas informações -->
           </div>
         </div>
-  
+
         <!-- POST 2 -->
         <div class="card post">
           <div class="post-user">
@@ -103,20 +102,19 @@
               <p>Pai de 1 filho • 4 horas</p> <!-- 'Linkar' informações de usuário -->
             </div>
           </div>
-  
+
           <p class="tag">Sono e Rotina</p> <!-- Função para receber a categoria registrada -->
-  
+
           <p>
             Compartilhando nossa rotina de sono que finalmente funcionou...
           </p>
-  
-        </div>
-  
-      </div>
-  
-      <!-- SIDEBAR DIREITA -->
-      <div class="right-panel">
 
+        </div>
+
+      </article>
+
+      <!-- SIDEBAR DIREITA -->
+      <article class="right-panel">
         <!-- Criar função para que os dados sejam registrados/atualizados diariamente -->
         <div class="card stats">
           <h3>Nossa Comunidade</h3>
@@ -124,27 +122,27 @@
           <p><strong>156</strong> Conversas Hoje</p>
           <p><strong>1.203</strong> Apoios Dados</p>
         </div>
-  
+
         <div class="card resources">
           <h3>Recursos Recomendados</h3>
-  
+
           <div class="resource-item">
             <p><strong>Como lidar com birras</strong></p>
             <span>Estratégias baseadas em evidências</span>
           </div>
-  
+
           <div class="resource-item">
             <p><strong>Desenvolvimento emocional</strong></p>
             <span>Webinar com especialista</span>
           </div>
-  
+
           <button class="primary">Ver todos</button>
         </div>
-  
-      </div>
-  
-    </div>
-  
+
+      </article>
+
+    </section>
+
   </main>
 
   <script type="module" src=".//interfaces/js/script.js"></script>

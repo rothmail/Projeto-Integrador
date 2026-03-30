@@ -188,6 +188,10 @@ button.primary:hover {
     border-radius: 10px;
 }
 
+textarea {
+    width: 100%;
+}
+
 .textarea-post {
     border-radius: 10px;
 }
