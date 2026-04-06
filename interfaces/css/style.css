@@ -257,3 +257,29 @@ textarea {
     color: var(--text-medium);
     font-size: 12px;
 }
+
+/*
+**ADICIONAL TESTE
+*/
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin: 10px 0;
+}
+
+aside.card article {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+aside.card article:last-child {
+    border-bottom: none;
+}
+
+footer input {
+    width: 100%;
+    margin-top: 15px;
+}
