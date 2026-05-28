@@ -8,8 +8,7 @@
 }
 
 /* VARIÁVEIS */
-:root {
-    --bg-main: #F5DEB3;   
+:root {  
     --bg-light: #F1F1F1;
     --bg-card: #E5E5E5;
     --brown: #8B4513;
@@ -20,7 +19,7 @@
 /* BODY */
 body {
     display: flex;
-    background-color: var(--bg-main);
+    background-color: var(--bg-light);
     color: var(--text-dark);
 }
 
@@ -131,7 +130,7 @@ body {
 
 /* CARD PADRÃO */
 .card {
-    background-color: var(--bg-light);
+    background-color: #fcfcfc;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
@@ -159,15 +158,14 @@ button.primary:hover {
 */
 
 /* GRID PRINCIPAL */
-.content-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
+section {
+    display: flex;
+    margin: auto;
+    margin-top: 10%;
 }
 
 /* CREATE POST */
 .create-post {
-    background: #E8DC92;
     width: 65.7%;
 }
 
@@ -270,13 +268,31 @@ input {
     margin: 10px 0;
 }
 
-aside.card article {
+.content-chat {
+    width: 50%;
+}
+
+aside.card-aside article {
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
 }
 
-aside.card article:last-child {
+aside.card-aside article:last-child {
     border-bottom: none;
+}
+
+.card-chat {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 100%;
+}
+
+.card-chat header {
+    margin-bottom: 5%;
+    padding: 5%;
+    border-radius: 10px;
+    background-color: var(--bg-card);
 }
 
 footer input {
