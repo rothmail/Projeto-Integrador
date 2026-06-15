@@ -130,7 +130,6 @@ body {
 }
 
 .div {
-    background-color: #fcfcfc;
     padding: 3%;
     border-radius: 15px;
     width: 100%;
@@ -201,6 +200,7 @@ section {
 
 /* CREATE POST */
 .create-post {
+    background-color: #fcfcfc;
     width: 55%;
     margin: 0; /*topo, direita, inferior, esquerda*/
 }
@@ -208,7 +208,6 @@ section {
 .post-header {
     display: flex;
     gap: 15px;
-    height: 60%;
 }
 
 .post-header, .feed {
@@ -280,7 +279,6 @@ textarea {
 .right-panel {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .resources {
