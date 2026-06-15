@@ -28,8 +28,12 @@
   <!-- NAV MENU -->
   <nav class="nav-sidebar">
     <li><i class="fa-solid fa-house"></i></i>Início</li>
-    <a href="./interfaces/html/comunidade.html"><li><i class="fa-solid fa-users"></i>Minha Comunidade</li></a>
-    <a href="./interfaces/html/chat.html"><li><i class="fa-solid fa-comment"></i>Conversas</li></a>
+    <a href="./interfaces/html/comunidade.html">
+      <li><i class="fa-solid fa-users"></i>Minha Comunidade</li>
+    </a>
+    <a href="./interfaces/html/chat.html">
+      <li><i class="fa-solid fa-comment"></i>Conversas</li>
+    </a>
     <hr>
     <legend>Fóruns Temáticos</legend>
     <li><i class="fa-solid fa-baby-carriage"></i>1º Infância (0-3 anos)</li>
@@ -50,25 +54,23 @@
 
   <!-- TESTE -->
   <main class="main-content">
-
     <!-- CRIAR POST -->
-    <section class="card create-post">
-      <article class="post-header">
-        <i class="fa-solid fa-user"></i> <!-- Adicionar função para 'linkar' com a foto de perfil -->
-        <div class="input-area">
-          <textarea name="" class="textarea-post" id="create-post" cols="100" rows="5"></textarea>
-          <div class="post-actions">
-            <span><i class="fa-solid fa-image"></i> Foto</span>
-            <select> <!-- Acrescentar categorias -->
-              <option>Geral</option>
-            </select>
+    <section class="first-section">
+      <article class="article card-header">
+        <div class="div post-header create-post">
+          <i class="fa-solid fa-user"></i> <!-- Adicionar função para 'linkar' com a foto de perfil -->
+          <div class="input-area">
+            <textarea name="" class="textarea-post" id="create-post" cols="100" rows="5"></textarea>
+            <div class="post-actions">
+              <span><i class="fa-solid fa-image"></i> Foto</span>
+              <select> <!-- Acrescentar categorias -->
+                <option>Geral</option>
+              </select>
+            </div>
           </div>
         </div>
-      </article>
-    </section>
 
-    <section class="content-grid">
-      <!-- FEED -->
+        <!-- FEED -->
       <article class="feed">
         <!-- POST 1 -->
         <div class="card post">
@@ -113,35 +115,37 @@
 
       </article>
 
-      <!-- SIDEBAR DIREITA -->
-      <article class="right-panel">
-        <!-- Criar função para que os dados sejam registrados/atualizados diariamente -->
-        <div class="card stats">
-          <h3>Nossa Comunidade</h3>
-          <p><strong>2.847</strong> Membros Ativos</p>
-          <p><strong>156</strong> Conversas Hoje</p>
-          <p><strong>1.203</strong> Apoios Dados</p>
-        </div>
 
-        <div class="card resources">
-          <h3>Recursos Recomendados</h3>
-
-          <div class="resource-item">
-            <p><strong>Como lidar com birras</strong></p>
-            <span>Estratégias baseadas em evidências</span>
-          </div>
-
-          <div class="resource-item">
-            <p><strong>Desenvolvimento emocional</strong></p>
-            <span>Webinar com especialista</span>
-          </div>
-
-          <button class="primary">Ver todos</button>
-        </div>
-
+        
       </article>
-
     </section>
+
+    <!-- SIDEBAR DIREITA -->
+    <div class="div infos right-panel">
+      <!-- Criar função para que os dados sejam registrados/atualizados diariamente -->
+      <div class="card stats">
+        <h3>Nossa Comunidade</h3>
+        <p><strong>2.847</strong> Membros Ativos</p>
+        <p><strong>156</strong> Conversas Hoje</p>
+        <p><strong>1.203</strong> Apoios Dados</p>
+      </div>
+
+      <div class="card resources">
+        <h3>Recursos Recomendados</h3>
+
+        <div class="resource-item">
+          <p><strong>Como lidar com birras</strong></p>
+          <span>Estratégias baseadas em evidências</span>
+        </div>
+
+        <div class="resource-item">
+          <p><strong>Desenvolvimento emocional</strong></p>
+          <span>Webinar com especialista</span>
+        </div>
+
+        <button class="primary">Ver todos</button>
+      </div>
+    </div>
 
   </main>
 

@@ -122,20 +122,51 @@ body {
 
 /* MAIN CONTENT (caso tu adicione depois) */
 .main-content {
+    display: flex;
     margin-left: 250px;
     margin-top: 100px;
     padding: 40px;
-    width: calc(100% - 250px);
+    width: 100%;
+}
+
+.div {
+    background-color: #fcfcfc;
+    padding: 3%;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.first-section {
+    width: 100%;
+    display: flex;
+    margin: 0;
 }
 
 /* CARD PADRÃO */
 .card {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #fcfcfc;
+    margin: 1%;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
+
+.infos {
+    width: 30%;
+}
+
+.card-header {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 
 /* BOTÕES */
 button.primary {
@@ -153,26 +184,37 @@ button.primary:hover {
 }
 
 
-/**
-* TESTE
-*/
-
 /* GRID PRINCIPAL */
 section {
+    width: 100%;
     display: flex;
     margin: auto;
     margin-top: 10%;
 }
 
+.feed {
+    display: flex;
+    width: 55%;
+    flex-direction: column;
+    margin: 0;
+}
+
 /* CREATE POST */
 .create-post {
-    width: 65.7%;
+    width: 55%;
+    margin: 0; /*topo, direita, inferior, esquerda*/
 }
 
 .post-header {
     display: flex;
     gap: 15px;
+    height: 60%;
 }
+
+.post-header, .feed {
+    width: 90%;
+}
+
 
 .post-header img {
     border-radius: 50%;
@@ -239,6 +281,11 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.resources {
+    display: flex;
+    flex-direction: column;
 }
 
 .stats h3,
